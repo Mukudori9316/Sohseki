@@ -15,14 +15,14 @@ def word_picker(arg, val=100):
 def sentence_generator(syugo, jutsugo, mokutekigo, keiyoshi, fukushi, jodoshi):
     sohseki = ''
     if syugo is not None:
-        sohseki += syugo[5][:-1] + u'は'
+        sohseki += syugo[5][:-1] + u'[は/が]'
     if fukushi is not None:
         sohseki += fukushi[5][:-1]
     if keiyoshi is not None:
         sohseki += keiyoshi[5][:-1]
         sohseki += mokutekigo[5][:-1]
     if mokutekigo is not None:
-        sohseki += mokutekigo[5][:-1] + u'を'
+        sohseki += mokutekigo[5][:-1] + u'[を/に]'
     sohseki += jutsugo[0]
     if u'連用' in jutsugo[4]:
         if jodoshi is not None:
