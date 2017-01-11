@@ -31,6 +31,8 @@ def sentence_generator(syugo, jutsugo, mokutekigo, keiyoshi, fukushi, jodoshi):
             sohseki += u'、'
     elif (syugo is None) and u'連体' in jutsugo[4]:
         sohseki += u'-'
+    elif u'仮定' in jutsugo[4]:
+        sohseki += u'ば'
     else:
         sohseki += u'。'
         sohseki += '\n'
