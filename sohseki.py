@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import random
 
 
@@ -49,6 +50,7 @@ def sohseki(sub, tai, ju, ry, rt, aux):
         sohseki += sentence_generator(s, j, m, k, f, jo)
         if sohseki[-1:] == '\n':
             break
+
     return sohseki
 
 
