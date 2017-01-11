@@ -6,11 +6,14 @@ words = ''
 with open('kokoro.txt', 'r', encoding='utf-8') as f:
     kokoro = list(f)
 
+kokoro = kokoro[22:-14]
+
 for n, i in enumerate(kokoro):
     if i != '\n':
         txt += i[:-1]
 t = Tokenizer()
 tokens = t.tokenize(txt)
+
 
 for token in tokens:
     n1 = token.surface
