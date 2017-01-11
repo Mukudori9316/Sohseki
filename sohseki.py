@@ -55,28 +55,28 @@ def sohseki(sub, tai, ju, ry, rt, aux):
 
     return sohseki
 
-
-wlist = []
-subjective, jutsu, rentai, tai, renyo, jo = [], [], [], [], [], []
-n, v, adj, adv, aux = u'名詞', u'動詞', u'形容詞', u'副詞', u'助動詞'
-f = list(open('wlist.txt', 'r', encoding='utf-8'))
-for word in f:
-    wi = word.split(',')
-    wi = tuple(wi)
-    wlist.append(wi)
-for w in wlist:
-    if (w[1] == n and
-       (w[2] == u'代名詞' or w[2] == u'固有名詞' or w[2] == u'一般')):
-            subjective.append(w)
-    elif w[1] == (v or adj):
-        jutsu.append(w)
-    elif w[1] == adj:
-        rentai.append(w)
-    elif w[1] == n and w[2] != u'非自立':
-        tai.append(w)
-    elif w[1] == adv:
-        renyo.append(w)
-    elif w[1] == aux:
-        jo.append(w)
-
-print(sohseki(subjective, tai, jutsu, renyo, rentai, jo))
+while True:
+    wlist = []
+    subjective, jutsu, rentai, tai, renyo, jo = [], [], [], [], [], []
+    n, v, adj, adv, aux = u'名詞', u'動詞', u'形容詞', u'副詞', u'助動詞'
+    f = list(open('wlist.txt', 'r', encoding='utf-8'))
+    for word in f:
+        wi = word.split(',')
+        wi = tuple(wi)
+        wlist.append(wi)
+    for w in wlist:
+        if (w[1] == n and
+           (w[2] == u'代名詞' or w[2] == u'固有名詞' or w[2] == u'一般')):
+                subjective.append(w)
+        elif w[1] == (v or adj):
+            jutsu.append(w)
+        elif w[1] == adj:
+            rentai.append(w)
+        elif w[1] == n and w[2] != u'非自立':
+            tai.append(w)
+        elif w[1] == adv:
+            renyo.append(w)
+        elif w[1] == aux:
+            jo.append(w)
+    print(sohseki(subjective, tai, jutsu, renyo, rentai, jo))
+    input()
