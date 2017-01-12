@@ -56,7 +56,10 @@ def sohseki(sub, tai, ju, ry, rt, aux):
 
     return sohseki
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c00e9d003a09228a16e84ccb97e7d50a65988e49
 while True:
     wlist = []
     subjective, jutsu, rentai, tai, renyo, jo = [], [], [], [], [], []
