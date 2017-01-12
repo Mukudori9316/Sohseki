@@ -1,3 +1,4 @@
+#!/bin/sh
 # -*- coding: utf-8 -*-
 import random
 
@@ -54,6 +55,7 @@ def sohseki(sub, tai, ju, ry, rt, aux):
             break
 
     return sohseki
+
 
 while True:
     wlist = []
