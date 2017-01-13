@@ -22,7 +22,7 @@ for token in tokens:
     n4 = token.part_of_speech.split(',')[2]
     n5 = token.infl_form
     n6 = token.base_form
-    if n2 != u'記号':
+    if n2 != u'記号' and n3 != u'数':
         words += (n1 + ',' + n2 + ',' + n3 + ',' +
                   n4 + ',' + n5 + ',' + n6 + '\n')
 f.close()
@@ -51,7 +51,7 @@ for token in tokens:
     n4 = token.part_of_speech.split(',')[2]
     n5 = token.infl_form
     n6 = token.base_form
-    if n2 != u'記号':
+    if n2 != u'記号' and n3 != u'数':
         words += (n1 + ',' + n2 + ',' + n3 + ',' +
                   n4 + ',' + n5 + ',' + n6 + '\n')
 f.close()
